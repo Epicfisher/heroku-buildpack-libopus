@@ -17,7 +17,6 @@ SOURCE_TARBALL='https://github.com/xiph/opus/archive/master.tar.gz'
 echo "Building $BP_NAME..."
 
 # Get source
-mkdir -p "$TMP_DIR"
 echo "Downloading Source..."
 curl -L "$SOURCE_TARBALL" | tar -zxv --strip=1
 echo "Cleaning Up Tarball..."
