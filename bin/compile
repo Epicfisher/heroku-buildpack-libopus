@@ -19,8 +19,6 @@ echo "Building $BP_NAME..."
 # Get source
 echo "Downloading Source..."
 curl -L "$SOURCE_TARBALL" | tar -zxv --strip=1
-echo "Cleaning Up Tarball..."
-rm master.tar.gz
 
 # Build
 echo "Now Building..."
