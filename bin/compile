@@ -22,7 +22,10 @@ curl -L "$SOURCE_TARBALL" | tar -zxv --strip=1
 
 # Build
 echo "Now Building..."
-opus-master/configure --prefix="$VENDOR_DIR" --disable-static
+cd opus-master
+./autogen.sh
+./configure --prefix=/app/.heroku/vendor    \
+  --disable-static &&
 make
 
 # Create .profile script for runtime environment
