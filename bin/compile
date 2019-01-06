@@ -13,10 +13,12 @@ BUILD_DIR=$1
 TMP_DIR="/tmp/$BP_NAME"
 VENDOR_DIR="$BUILD_DIR/.heroku/vendor"
 
+# Below line uses the current state of the Opus Repo as your Source.
 #SOURCE_TARBALL='https://github.com/xiph/opus/archive/master.tar.gz'
+# Below line uses the most recent Release of Opus as your Source.
 SOURCE_TARBALL=$(curl --silent "https://api.github.com/repos/xiph/opus/tags" | grep -Po -m1 '"tarball_url": "\K.*?(?=")')
 
-echo "Building $BP_NAME From $SOURCE_TARBALL..."
+echo "Building $BP_NAME From $SOURCE_TARBALL"
 
 # Get source
 mkdir -p "$TMP_DIR"
