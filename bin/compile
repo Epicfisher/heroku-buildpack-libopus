@@ -14,17 +14,13 @@ TMP_DIR="/tmp/$BP_NAME"
 VENDOR_DIR="$BUILD_DIR/.heroku/vendor"
 
 #SOURCE_TARBALL='https://github.com/xiph/opus/archive/master.tar.gz'
+SOURCE_TARBALL=curl --silent "https://api.github.com/repos/xiph/opus/tags" | grep -Po '"tarball_url": "\K.*?(?=")'
 
-echo "Building $BP_NAME..."
+echo "Building $BP_NAME From $SOURCE_TARBALL..."
 
 # Get source
 mkdir -p "$TMP_DIR"
-curl -s https://api.github.com/repos/xiph/opus/tags \
-| grep "tarball_url" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| curl -L -qi - | tar -zxv --strip=1 -C "$TMP_DIR"
-#curl -L "$SOURCE_TARBALL" | tar -zxv --strip=1 -C "$TMP_DIR"
+curl -L "$SOURCE_TARBALL" | tar -zxv --strip=1 -C "$TMP_DIR"
 cd "$TMP_DIR"
 
 # Build
