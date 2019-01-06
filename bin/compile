@@ -13,7 +13,7 @@ BUILD_DIR=$1
 TMP_DIR="/tmp/$BP_NAME"
 VENDOR_DIR="$BUILD_DIR/.heroku/vendor"
 
-SOURCE_TARBALL='http://downloads.xiph.org/releases/opus/opus-1.2-alpha.tar.gz'
+SOURCE_TARBALL='https://github.com/xiph/opus/archive/master.tar.gz'
 
 echo "Building $BP_NAME..."
 
