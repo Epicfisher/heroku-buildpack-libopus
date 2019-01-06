@@ -12,13 +12,12 @@ BIN_DIR=$(cd $(dirname $0); pwd)
 BUILD_DIR=$1
 VENDOR_DIR="$BUILD_DIR/.heroku/vendor"
 
-SOURCE_TARBALL='https://github.com/xiph/opus/archive/master.tar.gz'
-
 echo "Building $BP_NAME..."
 
 # Get source
 echo "Downloading Source..."
-curl -L "$SOURCE_TARBALL" | tar -zxv --strip=1
+#curl -L "$SOURCE_TARBALL" | tar -zxv --strip=1
+wget https://github.com/xiph/opus/archive/master.zip -O temp.zip; unzip temp.zip; rm temp.zip
 
 # Build
 echo "Now Building..."
