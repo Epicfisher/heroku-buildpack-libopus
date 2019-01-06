@@ -24,6 +24,7 @@ curl -L "$SOURCE_TARBALL" | tar -zxv --strip=1 -C "$TMP_DIR"
 cd "$TMP_DIR"
 
 # Build
+./autogen.sh
 ./configure --prefix="$VENDOR_DIR" --disable-static
 make
 make install
