@@ -22,7 +22,7 @@ curl -L "$SOURCE_TARBALL" | tar -zxv --strip=1
 
 # Build
 echo "Now Building..."
-./configure --prefix="$VENDOR_DIR" --disable-static
+opus-master/configure --prefix="$VENDOR_DIR" --disable-static
 make
 
 # Create .profile script for runtime environment
