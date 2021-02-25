@@ -1,4 +1,4 @@
-# heroku-buildpack-libopus
+# heroku-buildpack-libopus-latest
 
 A Heroku buildpack that downloads and builds the most recent versions of libopus.
 
