@@ -6,4 +6,4 @@ A [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) that downlo
 Optionally, by switching the `SOURCE_TARBALL` definition in `bin/compile`, the current State of the Opus Repo can be used as your Source, instead of the most recent version
 
 ## Installation
-To use the Buildpack, add ```https://github.com/Epicfisher/heroku-buildpack-libopus-latest``` to your App's list of Buildpacks
+Add ```https://github.com/Epicfisher/heroku-buildpack-libopus-latest``` to your App's list of Buildpacks
